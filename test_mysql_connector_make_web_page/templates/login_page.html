@@ -1,0 +1,27 @@
+<!-- comment -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in Page</title>
+    <h3>Welcome! This is Jason's restaurant delivery webpage</h3>
+    <h4>If you already have an account, please log in</h4>
+</head>
+<body>
+
+<form method="post">
+    <label>Login ID: </label><input type="text" name="username"><br>
+    <label>Password: </label><input type="password" name="password"><br>
+    <input type="submit" name = "Submit" value="Submit"><br>
+
+    {% for message in get_flashed_messages() %}
+        {{ message }}
+    {% endfor %}
+    <hr>
+    <h4>If you are new here, please sign up a new account!</h4>
+
+    <input type="submit" name = "Submit" value="Register">
+</form>
+
+</body>
+</html>

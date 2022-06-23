@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <h3>Please check out today's menu</h3>
+</head>
+<body>
+<form method="post">
+    <h4>You can order food now!</h4>
+    <label>Name: </label><input type="text" name="name"><br>
+    <!-- table for menu without images -->
+    <table>
+        <tr>
+            <td><label> Food name </label></td>  <td> <label> Price </label> </td> <td> <label> Number </label> </td>
+        </tr>
+        <tr>
+            <td><label> Beancurd </label></td>  <td> <label> 15$ </label> </td> <td><input type="Integer" name="num0"></td>
+        </tr>
+        <tr>
+            <td><label> Braised pork rice </label></td>  <td> <label> 12$ </label> </td> <td><input type="Integer" name="num1"></td>
+        </tr>
+        <tr>
+            <td><label> Three cup chicken </label></td>  <td> <label> 20$ </label> </td> <td><input type="Integer" name="num2"></td>
+        </tr>
+        <tr>
+            <td><label> Peppery Chicken </label></td>  <td> <label> 18$ </label> </td> <td><input type="Integer" name="num3"></td>
+        </tr>
+        <tr>
+            <td><label> eggplant </label></td>  <td> <label> 13$ </label> </td> <td><input type="Integer" name="num4"></td>
+        </tr>
+
+    </table>
+    <input type="submit" name = "Submit" value="Proceed to checkout"><br>
+
+    {% for message in get_flashed_messages() %}
+        {{ message }}
+    {% endfor %}
+
+</form>
+
+</body>
+</html>
